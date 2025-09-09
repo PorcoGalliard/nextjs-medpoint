@@ -12,7 +12,7 @@
     "test:watch": "jest --watch",
     "lint-staged": "lint-staged",
     "prepare": "husky",
-    "preinstall": "if [ -n \"$GITEA_TOKEN\" ] && [ -n \"$GITEA_USERNAME\" ]; then git config --global url.\"https://$GITEA_USERNAME:$GITEA_TOKEN@gitea.sev-2.com/\".insteadOf \"https://gitea.sev-2.com/\"; fi"
+    "preinstall": "node scripts/fix-deps.js"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
@@ -24,7 +24,7 @@
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.47.12",
     "axios": "^1.7.9",
-    "jekoneng-web-ui": "git+https://gitea.sev-2.com/refactory/jekoneng-web-ui#main",
+    "jekoneng-web-ui": "git+https://gitea.sev-2.com/refactory/jekoneng-web-ui.git#main",
     "next": "15.1.4",
     "next-intl": "^3.26.3",
     "react": "^19.0.0",
