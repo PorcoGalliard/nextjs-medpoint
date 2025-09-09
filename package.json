@@ -12,7 +12,7 @@
     "test:watch": "jest --watch",
     "lint-staged": "lint-staged",
     "prepare": "husky",
-    "preinstall": "node scripts/fix-deps.js"
+    "preinstall": "node scripts/fix-deps.ts"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
